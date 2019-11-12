@@ -1,9 +1,13 @@
 {
-  "name": "@binary/ionic-helpers",
+  "name": "@binary-dev/ionic-helpers",
+  "author": {
+    "name": "James Manners",
+    "email": "james@binary.com.au",
+    "url": "https://binary.com.au"
+  },
+  "license": "MIT",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^8.2.13",
-    "@angular/core": "^8.2.13",
     "rxjs": "~6.4.0"
   },
   "optionalDependencies": {
