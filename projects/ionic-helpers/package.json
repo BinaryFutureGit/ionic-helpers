@@ -6,7 +6,7 @@
     "url": "https://binary.com.au"
   },
   "license": "MIT",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "repository": "github:BinaryFutureGit/ionic-helpers",
   "peerDependencies": {
     "rxjs": "~6.4.0"
