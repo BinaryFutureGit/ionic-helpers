@@ -36,9 +36,18 @@ import { Observable } from "rxjs";
  * @param zone the ngZone in which to execute the observable in
  * @example
  * ```
- * constructor(private ngZone:NgZone, private geolocation: Geolocation){
- *  this.location$ = this.geolocation.watchPosition.pipe(wrapInZone(this.ngZone))
+ * import { Injectable } from "@angular/core";
+ * import { wrapInZone } from "@binary-dev/ionic-helpers";
+ * import { Geolocation } from "@ionic-native/geolocation";
+ *
+ * @Injectable()
+ * export class MyLocation {
+ * location$ = this.geolocation.watchPosition.pipe(wrapInZone(this.ngZone))
+ *
+ *  constructor(private ngZone:NgZone, private geolocation: Geolocation){ }
+ *
  * }
+ *
  * ```
  */
 export function wrapInZone(zone: NgZone) {

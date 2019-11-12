@@ -3,3 +3,4 @@
  */
 
 export * from "./lib/wrap-in-zone";
+export * from "./lib/bind-capacitor-listener";
