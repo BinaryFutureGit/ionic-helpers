@@ -31,7 +31,7 @@ import { Observable } from "rxjs";
  * listener in most circumstances as TypeScript can't infer the return type
  * automatically based on the event name.
  *
- * @param addListenerFn capacitor listener function reference
+ * @param plugin capacitor plugin
  * @param eventName the event name
  * @example
  * ```
@@ -41,7 +41,7 @@ import { Observable } from "rxjs";
  * const { PushNotifications } = Plugins;
  *
  * const pushNotificationReceived$ = bindCapacitorListener<PushNotification>(
- *   PushNotifications.addListener,
+ *   PushNotifications,
  *   "pushNotificationReceived"
  * );
  *
@@ -52,21 +52,28 @@ import { Observable } from "rxjs";
  * ```
  */
 export function bindCapacitorListener<ReturnVal>(
-  addListenerFn: (
-    ev: string,
-    cb: (result: ReturnVal) => void
-  ) => PluginListenerHandle,
+  plugin: {
+    addListener: (
+      ev: string,
+      cb: (result: ReturnVal) => void
+    ) => PluginListenerHandle;
+  },
   eventName: string
 ): Observable<ReturnVal>;
 export function bindCapacitorListener<EventName, ReturnVal>(
-  addListenerFn: (
-    ev: EventName,
-    cb: (result: ReturnVal) => void
-  ) => PluginListenerHandle,
+  plugin: {
+    addListener: (
+      ev: EventName,
+      cb: (result: ReturnVal) => void
+    ) => PluginListenerHandle;
+  },
   eventName: EventName
 ): Observable<ReturnVal> {
   return new Observable<ReturnVal>(observer => {
-    const listener = addListenerFn(eventName, result => observer.next(result));
+    const listener = plugin.addListener.apply(plugin, [
+      eventName,
+      result => observer.next(result),
+    ]);
     return () => listener.remove();
   });
 }
