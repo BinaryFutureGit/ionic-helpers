@@ -1,0 +1,12 @@
+{
+  "name": "@binary/ionic-helpers",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.13",
+    "@angular/core": "^8.2.13",
+    "rxjs": "~6.4.0"
+  },
+  "optionalDependencies": {
+    "@capacitor/core": "^1.0.0"
+  }
+}
