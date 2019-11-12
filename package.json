@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prepublish": "npm run build ionic-helpers",
-    "publish": "npm publish ./dist/ionic-helpers"
+    "publish": "npm publish ./dist/ionic-helpers --access public"
   },
   "private": true,
   "dependencies": {
