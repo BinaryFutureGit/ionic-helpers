@@ -6,7 +6,7 @@
     "url": "https://binary.com.au"
   },
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "peerDependencies": {
     "rxjs": "~6.4.0"
   },
