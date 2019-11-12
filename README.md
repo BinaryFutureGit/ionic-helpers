@@ -1,27 +1,26 @@
-# IonicHelpers
+# Ionic Helpers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
+This is a small collection of utilities that we use on every Ionic Capacitor/Cordova project.
 
-## Development server
+1. [wrapInZone](#wrapInZone)
+1. [bindCapacitorListener](#bindCapacitorListener)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## wrapInZone
 
-## Code scaffolding
+`wrapInZone` is a pipeable RXJS operator that is used to ensure that and value emissions are wrapped in angular NgZone and can trigger change detection as expected.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Refer to the source for documentation and example usage](projects/ionic-helpers/src/lib/wrap-in-zone.ts).
 
-## Build
+## bindCapacitorListener
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`bindCapacitorListener` is a simple function to create an RXJS Observable from a Capacitor Event Listener. This allows you to use the power of RXJS to combine, mutate and interact with these events.
 
-## Running unit tests
+[Refer to the source for documentation and example usage](projects/ionic-helpers/src/lib/bind-capacitor-listener.ts).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## More Info
 
-## Running end-to-end tests
+Please see the library [README](projects/ionic-helpers/README.md)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Who are we?
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[Binary](https://binary.com.au) are a company specialising in App & Web Development. We've been building Ionic/Angular apps and are available to help you with your app with code review, troubleshooting, development or more. Get in contact with us at [binary.com.au](https://binary.com.au).
