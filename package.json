@@ -2,6 +2,7 @@
   "name": "ionic-helpers",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
   "repository": "github:BinaryFutureGit/ionic-helpers",
   "scripts": {
     "ng": "ng",
