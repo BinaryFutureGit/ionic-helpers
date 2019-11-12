@@ -7,6 +7,7 @@
   },
   "license": "MIT",
   "version": "0.1.2",
+  "repository": "github:BinaryFutureGit/ionic-helpers",
   "peerDependencies": {
     "rxjs": "~6.4.0"
   },

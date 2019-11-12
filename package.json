@@ -2,6 +2,7 @@
   "name": "ionic-helpers",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": "github:BinaryFutureGit/ionic-helpers",
   "scripts": {
     "ng": "ng",
     "prettier": "prettier --write \"**/*.{js,json,css,scss,less,md,ts,html,component.html}\"",
@@ -13,7 +14,6 @@
     "prepublish": "npm run build ionic-helpers",
     "publish": "npm publish ./dist/ionic-helpers --access public"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.13",
     "@angular/common": "~8.2.13",
